@@ -1,0 +1,67 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE HTML>
+<html>
+@Html.Partial("PartialHead")
+<body>
+
+
+
+    <h1>Müşteri Kayıt Formu</h1>
+
+    <div class="login">
+        <span class="log-close"> </span>
+        <div class="login-bottom">
+            <form>
+
+                <div class="text">
+                    <input type="text" placeholder="Adınızı giriniz" required="" name="CustomerName" />
+                    <div class="clear"> </div>
+                </div>
+
+
+
+                <div class="text">
+                    <input type="text" placeholder="Soyadınızı giriniz" required="" name="CustomerSurname" />
+                    <div class="clear"> </div>
+                </div>
+
+
+
+                <div class="text">
+                    <input type="text" placeholder="Telefon numaranızı giriniz" required="" name="CustomerPhone" />
+                    <div class="clear"> </div>
+                </div>
+
+
+
+                <div class="text">
+                    <input type="text" placeholder="Mail adresinizi giriniz" required="" name="CustomerMail" />
+                    <div class="clear"> </div>
+                </div>
+
+                <div class="text">
+                    <input type="text" placeholder="Şifrenizi giriniz" required="" name="CustomerPassword" />
+                    <div class="clear"> </div>
+                </div>
+
+                <div class="remember">
+
+                    <div class="send">
+                        <input type="submit" value="Kayıt Ol">
+                    </div>
+                    <div class="clear"> </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="copy-right">
+        <p>@DateTime.Now.Year Creative Account Form.Tüm hakları saklıdır.| Design by  <a href="http://w3layouts.com/" target="_blank">  W3layouts </a></p>
+    </div>
+</body>
+</html>
+

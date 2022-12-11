@@ -1,0 +1,38 @@
+﻿@using Logıstıc.UILayer.Models
+@model List<TblOrder>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+<h2>Sipariş Listesi</h2>
+
+<table class="table table-striped">
+<tr>
+    <th>#</th>
+    <th>Müşteri</th>
+    <th>Nereden</th>
+    <th>Nereye</th>
+    <th>Ürün</th>
+    <th>Boyut</th>
+    <th>Fiyat</th>
+    <th>Sil</th>
+    <th>Güncelle</th>
+</tr>
+    @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.OrderID</td>
+                    <td>@item.TblCustomer.CustomerName @item.TblCustomer.CustomerSurname</td>
+                    <td>@item.TblCity.CityName</td>
+                    <td>@item.TblCity1.CityName</td>
+                    <td>@item.OrderProduct</td>
+                    <td>@item.OrderSize</td>
+                    <td>@item.OrderPrice</td>
+                    <td><a href="/Order/DeleteOrder/@item.OrderID" class="btn btn-danger">Sil</a></td>
+                    <td><a href="/Order/UpdateOrder/@item.OrderID" class="btn btn-success">Güncelle</a></td>
+                </tr>
+            }
+</table>
+<a href="/Order/AddOrder/" class="btn btn-info">Yeni Sipariş Girişi</a>
+

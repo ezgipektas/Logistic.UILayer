@@ -1,0 +1,18 @@
+﻿@model Logıstıc.UILayer.Models.TblCategory
+@{
+    ViewBag.Title = "UpdateCategory";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+<h2>Kategori Güncelleme Sayfası</h2>
+
+<form method="post">
+    <label>Kategori ID</label>
+    <input type="text" name="CategoryID" value="@Model.CategoryID" class="form-control " />
+    <br />
+    <label>Kategori Adı</label>
+    <input type="text" name="CategoryName" value="@Model.CategoryName" class="form-control " />
+    <br />
+    <button class="btn btn-warning">Kategoriyi Güncelle</button>
+
+</form>

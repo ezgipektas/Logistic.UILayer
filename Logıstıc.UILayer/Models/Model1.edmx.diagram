@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1340aca1b43643008531a928bfff3008" Name="Diagram1">
+        <EntityTypeShape EntityType="DbLogisticModel.TblCategory" Width="1.5" PointX="0.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbLogisticModel.TblCity" Width="1.5" PointX="0.5" PointY="2.875" />
+        <EntityTypeShape EntityType="DbLogisticModel.TblOrder" Width="1.5" PointX="5" PointY="1.125" />
+        <AssociationConnector Association="DbLogisticModel.FK_TblOrder_TblCity" />
+        <AssociationConnector Association="DbLogisticModel.FK_TblOrder_TblCity1" />
+        <EntityTypeShape EntityType="DbLogisticModel.TblCustomer" Width="1.5" PointX="2.625" PointY="0.875" />
+        <AssociationConnector Association="DbLogisticModel.FK_TblOrder_TblCustomer" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<body>
+
+    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+    <script>
+var xValues = ["Uçak", "Gemi", "Tren", "Otobüs", "Motosiklet"];
+var yValues = [55, 49, 44, 24, 15];
+var barColors = ["red", "green","blue","yellow","brown"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+        display: true,
+        text: "Taşımacılık Kategori İstatistiği @DateTime.Now.Year"
+    }
+  }
+});
+    </script>
+
+</body>
+</html>
+<div class="row" style="margin-top:50px">
+    <div class="col-lg-3" style="background-color:#0094ff; height:100px;text-align:center; align-items:center">
+        <h4>Kategori Sayısı:</h4>
+        <h2>@ViewBag.v1</h2>
+    </div>
+
+    <div class="col-lg-3" style="background-color:#ff6a00; height:100px;text-align:center; align-items:center">
+        <h4>Müşteri Sayısı:</h4>
+        <h2>@ViewBag.v2</h2>
+    </div>
+
+    <div class="col-lg-3" style="background-color:#f12b2b; height:100px;text-align:center; align-items:center">
+        <h4>Son Eklenen Kategori:</h4>
+        <h2>@ViewBag.v3</h2>
+        
+    </div>
+
+    <div class="col-lg-3" style="background-color:#3c319f; height:100px;text-align:center; align-items:center">
+        <h4>Aktif Kategoriler:</h4>
+        <h2>@ViewBag.v4</h2>
+    </div>
+</div>
+
+

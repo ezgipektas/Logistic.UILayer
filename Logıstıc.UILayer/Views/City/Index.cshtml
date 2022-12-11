@@ -1,0 +1,27 @@
+﻿@using Logıstıc.UILayer.Models
+@model List<TblCity>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+    int sayac = 0;
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Şehir Adı</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        sayac += 1;
+        <tr>
+            <td>@sayac </td>
+            <td>@item.CityName</td>
+            <td> <a href="/City/DeleteCity/@item.CityID" class="btn btn-danger">Sil</a> </td>
+            <td> <a href="/City/UpdateCity/@item.CityID" class="btn btn-success">Güncelle</a> </td>
+        </tr>
+            }
+</table>
+<a href="#" class="btn btn-info">Yeni Şehir Girişi</a>

@@ -1,0 +1,44 @@
+﻿@{
+    Layout = null;
+}
+
+
+<!DOCTYPE HTML>
+<html>
+@Html.Partial("/Views/Admin/PartialHead.cshtml")
+<body>
+    <div class="page-container">
+        <!--/content-inner-->
+        <div class="left-content">
+            <div class="inner-content">
+                <!-- header-starts -->
+                @Html.Partial("/Views/Admin/PartialNavbar.cshtml")
+                <!-- //header-ends -->
+                <!--content-->
+                <div class="content">
+                    <div class="women_main">
+                        <!-- start content -->
+                        <div class="w_content">
+                            
+                            <!-- grids_of_4 -->
+                            @RenderBody()
+
+                            <!-- end grids_of_4 -->
+
+                        </div>
+                        <div class="clearfix"></div>
+                        <!-- end content -->
+
+                    </div>
+                </div>
+                <!--content-->
+            </div>
+        </div>
+        <!--//content-inner-->
+        <!--/sidebar-menu-->
+        @Html.Partial("/Views/Admin/PartialSideBar.cshtml")
+        <div class="clearfix"></div>
+    </div>
+    @Html.Partial("/Views/Admin/PartialScript.cshtml")
+</body>
+</html>

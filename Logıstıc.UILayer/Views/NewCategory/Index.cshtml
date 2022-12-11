@@ -1,0 +1,43 @@
+﻿@using Logıstıc.UILayer.Models
+@model List<TblCategory>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+@{ 
+    int sayac = 0;
+
+}
+
+<h2>Kategori Listesi</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Kategori Adı</th>
+        <th>Kategori Durumu</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        sayac++;
+        <tr>
+            <td>@sayac</td>
+            <td>@item.CategoryName</td>
+            @if (item.CategoryStatus == true)
+                {
+                    <td>Aktif</td>
+                }
+            @if (item.CategoryStatus == false)
+                {
+                    <td>Pasif</td>
+                }
+         
+            <td><a href="/NewCategory/DeleteCategory/@item.CategoryID" class="btn btn-danger ">Sil</a></td>
+            <td><a href="/NewCategory/UpdateCategory/@item.CategoryID" class="btn btn-success ">Güncelle</a></td>
+        </tr>
+    }
+
+</table>
+<tr><a href="/NewCategory/AddCategory/" class="btn btn-primary ">Yeni Kategori</a></tr>
+

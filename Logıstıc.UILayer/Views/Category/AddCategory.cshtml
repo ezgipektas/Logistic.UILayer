@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "AddCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Kategori Ekleme Sayfası</h2>
+
+<form method="post">
+    <label>Kategori Adı</label>
+    <input type="text" class="form-control" name="CategoryName" placeholder="Kategoriyi giriniz.." required />
+    <br />
+    <label>Kategori Durumu</label>
+    <input type="text" class="form-control" name="CategoryStatus"  placeholder="Durumu giriniz.."/>
+    <br />
+    <button class="btn btn-info">Kategoriyi Ekle</button>
+</form>
+

@@ -1,0 +1,31 @@
+﻿@using Logıstıc.UILayer.Models
+@model List<TblCategory>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<h2>Burası Kategorilerin Listesi Olacak</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Kategori Adı</th>
+        <th>Durum</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach(var item in Model)
+            {
+                <tr>
+                    <td> @item.CategoryID</td>
+                    <td> @item.CategoryName</td>
+                    <td> @item.CategoryStatus</td>
+                    <td> <a href="#" class="btn btn-danger">Sil</a> </td>
+                    <td> <a href="#" class="btn btn-success">Güncelle</a> </td>
+                </tr>
+            }
+
+
+</table>
+<a href="/Category/AddCategory/" class="btn btn-primary">Yeni Kategori Girişi</a>
