@@ -132,11 +132,16 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CityController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MapController.cs" />
+    <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\NewCategoryController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
+    <Compile Include="Controllers\ServicesController.cs" />
     <Compile Include="Controllers\StatisticController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -165,7 +170,16 @@
     <Compile Include="Models\TblCustomer.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\TblMap.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblMessage.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\TblOrder.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblTestimonial.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -333,6 +347,80 @@
     <Content Include="Templates\admin\adminweb\tabs.html" />
     <Content Include="Templates\admin\adminweb\validation.html" />
     <Content Include="Templates\admin\adminweb\w3layouts-License.txt" />
+    <Content Include="Templates\ui\web\contact.html" />
+    <Content Include="Templates\ui\web\css\bootstrap.css" />
+    <Content Include="Templates\ui\web\css\flexslider.css" />
+    <Content Include="Templates\ui\web\css\font-awesome.css" />
+    <Content Include="Templates\ui\web\css\lightbox.css" />
+    <Content Include="Templates\ui\web\css\style.css" />
+    <Content Include="Templates\ui\web\fonts\fontawesome-webfont.svg" />
+    <Content Include="Templates\ui\web\gallery.html" />
+    <Content Include="Templates\ui\web\icons.html" />
+    <Content Include="Templates\ui\web\images\angle.png" />
+    <Content Include="Templates\ui\web\images\arrow.png" />
+    <Content Include="Templates\ui\web\images\bg2.jpg" />
+    <Content Include="Templates\ui\web\images\bg3.jpg" />
+    <Content Include="Templates\ui\web\images\bg4.jpg" />
+    <Content Include="Templates\ui\web\images\bg5.jpg" />
+    <Content Include="Templates\ui\web\images\bg7.jpg" />
+    <Content Include="Templates\ui\web\images\bg8.jpg" />
+    <Content Include="Templates\ui\web\images\close.png" />
+    <Content Include="Templates\ui\web\images\dott.png" />
+    <Content Include="Templates\ui\web\images\flight1.jpg" />
+    <Content Include="Templates\ui\web\images\flight2.jpg" />
+    <Content Include="Templates\ui\web\images\flight3.jpg" />
+    <Content Include="Templates\ui\web\images\flight4.jpg" />
+    <Content Include="Templates\ui\web\images\flight5.jpg" />
+    <Content Include="Templates\ui\web\images\flight6.jpg" />
+    <Content Include="Templates\ui\web\images\g1.jpg" />
+    <Content Include="Templates\ui\web\images\g2.jpg" />
+    <Content Include="Templates\ui\web\images\g3.jpg" />
+    <Content Include="Templates\ui\web\images\g4.jpg" />
+    <Content Include="Templates\ui\web\images\g5.jpg" />
+    <Content Include="Templates\ui\web\images\g6.jpg" />
+    <Content Include="Templates\ui\web\images\g7.jpg" />
+    <Content Include="Templates\ui\web\images\left.png" />
+    <Content Include="Templates\ui\web\images\next.png" />
+    <Content Include="Templates\ui\web\images\p1.jpg" />
+    <Content Include="Templates\ui\web\images\p2.jpg" />
+    <Content Include="Templates\ui\web\images\p3.jpg" />
+    <Content Include="Templates\ui\web\images\play-button.png" />
+    <Content Include="Templates\ui\web\images\prev.png" />
+    <Content Include="Templates\ui\web\images\right.png" />
+    <Content Include="Templates\ui\web\images\ship1.jpg" />
+    <Content Include="Templates\ui\web\images\ship2.jpg" />
+    <Content Include="Templates\ui\web\images\ship3.jpg" />
+    <Content Include="Templates\ui\web\images\ship4.jpg" />
+    <Content Include="Templates\ui\web\images\ship5.jpg" />
+    <Content Include="Templates\ui\web\images\t1.jpg" />
+    <Content Include="Templates\ui\web\images\t2.jpg" />
+    <Content Include="Templates\ui\web\images\t3.jpg" />
+    <Content Include="Templates\ui\web\images\t4.jpg" />
+    <Content Include="Templates\ui\web\images\team1.jpg" />
+    <Content Include="Templates\ui\web\images\team2.jpg" />
+    <Content Include="Templates\ui\web\images\team3.jpg" />
+    <Content Include="Templates\ui\web\images\team4.jpg" />
+    <Content Include="Templates\ui\web\images\train1.jpg" />
+    <Content Include="Templates\ui\web\images\train2.jpg" />
+    <Content Include="Templates\ui\web\images\truck3.jpg" />
+    <Content Include="Templates\ui\web\images\truck4.jpg" />
+    <Content Include="Templates\ui\web\images\truck5.jpg" />
+    <Content Include="Templates\ui\web\index.html" />
+    <Content Include="Templates\ui\web\js\bootstrap.js" />
+    <Content Include="Templates\ui\web\js\counterup.min.js" />
+    <Content Include="Templates\ui\web\js\easing.js" />
+    <Content Include="Templates\ui\web\js\easyResponsiveTabs.js" />
+    <Content Include="Templates\ui\web\js\jquery-2.1.4.min.js" />
+    <Content Include="Templates\ui\web\js\jquery.flexslider.js" />
+    <Content Include="Templates\ui\web\js\lightbox-plus-jquery.min.js" />
+    <Content Include="Templates\ui\web\js\move-top.js" />
+    <Content Include="Templates\ui\web\js\responsiveslides.min.js" />
+    <Content Include="Templates\ui\web\js\simplePlayer.js" />
+    <Content Include="Templates\ui\web\js\SmoothScroll.min.js" />
+    <Content Include="Templates\ui\web\js\waypoints.min.js" />
+    <Content Include="Templates\ui\web\services.html" />
+    <Content Include="Templates\ui\web\typography.html" />
+    <Content Include="Templates\ui\web\w3layouts-License.txt" />
     <Content Include="Templates\web\css\style.css" />
     <Content Include="Templates\web\images\1.png" />
     <Content Include="Templates\web\images\clo.png" />
@@ -395,6 +483,26 @@
     <Content Include="Views\Statistic\Index.cshtml" />
     <Content Include="Views\Order\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Profile\Index.cshtml" />
+    <Content Include="Views\Message\Inbox.cshtml" />
+    <Content Include="Views\Message\Outbox.cshtml" />
+    <Content Include="Views\Message\SendMessage.cshtml" />
+    <Content Include="Views\Message\MessageDetails.cshtml" />
+    <Content Include="Views\Map\Index.cshtml" />
+    <Content Include="Templates\ui\web\fonts\fontawesome-webfont.eot" />
+    <Content Include="Templates\ui\web\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Templates\ui\web\fonts\fontawesome-webfont.woff" />
+    <Content Include="Templates\ui\web\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Templates\ui\web\fonts\FontAwesome.otf" />
+    <Content Include="Templates\ui\web\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Templates\ui\web\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Views\Shared\_DefaultLayout.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Default\PartialHead.cshtml" />
+    <Content Include="Views\Default\Navbar.cshtml" />
+    <Content Include="Views\Default\PartialStatistic.cshtml" />
+    <Content Include="Views\Default\PartialTestimonial.cshtml" />
+    <Content Include="Views\Services\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

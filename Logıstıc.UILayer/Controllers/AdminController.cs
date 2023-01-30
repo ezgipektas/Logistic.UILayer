@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace Logıstıc.UILayer.Controllers
 {
+    [AllowAnonymous]
     public class AdminController : Controller
     {
         // GET: Admin

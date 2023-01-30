@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace Logıstıc.UILayer.Controllers
 {
+    [AllowAnonymous]
     public class RegisterController : Controller
     {
         DbLogisticEntities1 db=new DbLogisticEntities1();

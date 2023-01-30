@@ -8,8 +8,9 @@ using Logıstıc.UILayer.Models;
 
 namespace Logıstıc.UILayer.Controllers
 {
+    [AllowAnonymous]
     public class LoginController : Controller
-    {
+    {        
         DbLogisticEntities1 db=new DbLogisticEntities1();
 
         // GET: Login

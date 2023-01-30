@@ -1,0 +1,23 @@
+﻿
+@model List<Logıstıc.UILayer.Models.TblTestimonial>
+<div class=" col-md-6 clients">
+    <h3>Referanslarımız</h3>
+    <section class="slider">
+        <div class="flexslider">
+            <ul class="slides">
+                @foreach (var item in Model)
+                {
+                    <li>
+                        <div class="client">
+                            <img src="@item.Image" alt="" />
+                            <h5>@item.NameSurname</h5>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <p>@item.TestimonialContent </p>
+
+                    </li>
+                }
+            </ul>
+        </div>
+    </section>
+</div>

@@ -7,8 +7,8 @@ using Logıstıc.UILayer.Models;
 
 namespace Logıstıc.UILayer.Controllers
 {
-    [Authorize]
-       
+    [AllowAnonymous]
+
     public class OrderController : Controller
     {
         DbLogisticEntities1 db=new DbLogisticEntities1();

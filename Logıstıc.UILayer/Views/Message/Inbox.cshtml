@@ -1,0 +1,30 @@
+﻿
+@using  Logıstıc.UILayer.Models
+@model List<TblMessage>
+@{
+    ViewBag.Title = "Inbox";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+<h2>Gelen Kutusu</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Gönderici</th>
+        <th>Konu</th>
+        <th>Tarih</th>
+        <th>Sil</th>
+        <th>Mesajı Aç</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.MessageID</td>
+            <td>@item.SenderName</td>
+            <td>@item.MessageSubject</td>
+            <td>@item.MessageDate</td>
+            <td><a href="#" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Message/MessageDetails/@item.MessageID" class="btn btn-warning">Mesajı Aç</a></td>
+        </tr>
+    }
+</table>

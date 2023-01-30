@@ -7,6 +7,8 @@ using Logıstıc.UILayer.Models;
 
 namespace Logıstıc.UILayer.Controllers
 {
+    [AllowAnonymous]
+ 
     public class DashboardController : Controller
     {
         DbLogisticEntities1 db=new DbLogisticEntities1();   
